@@ -16,10 +16,10 @@ class MartianClient(BaseClientInterface):
         messages: list[dict[str, str]],
         temperature: float = 0.0
     ) -> LLMOutput:
-        
+        final_prompt = "TODO"
         messages = [
             types.chat.ChatCompletionSystemMessageParam(role="system", content="You are a skilled {language} programmer."), # TODO, update for judges
-            types.chat.ChatCompletionUserMessageParam(role="user", content=final_prompt),
+            types.chat.ChatCompletionUserMessageParam(role="user", content=final_prompt), # TODO, create final_prompt
         ]
         
         response = await self.client.chat.completions.create(
