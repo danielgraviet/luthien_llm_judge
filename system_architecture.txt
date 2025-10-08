@@ -1,0 +1,17 @@
+luthien_llm_judge/
+│
+├── __init__.py
+│
+├── core/                     # <── foundational building blocks
+│   ├── judging_types.py
+│   ├── judging_protocols.py   # <- where LLMClient lives
+│   ├── utils_json.py
+│   └── config.py
+│
+├── adapters/                 # <── concrete model implementations
+│   └── openai_adapter.py
+│
+└── judges/                   # <── evaluation strategies
+    ├── base_judge.py
+    ├── pointwise_judge.py
+    └── pairwise_judge.py
